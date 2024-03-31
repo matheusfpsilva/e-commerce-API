@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 60%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.header-middle,
+.header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-middle {
+  justify-content: space-around;
+}
+
+.button {
+  font-size: 20px;
+  width: 200px;
+}
+
+.header-left-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.header-menu-item {
+  color: rgb(27, 80, 255);
+}
+
+.header-menu-item:hover {
+  color: rgb(23, 63, 194);
+}
+
+.header-left-bottom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.my-cart {
+  display: flex;
+  padding: 8px;
+  text-transform: uppercase;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 196, 0);
+  border-radius: 8px;
+  user-select: none;
+  transition: background-color .5s;
+}
+
+.checkbox {
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 4;
+  right: 7;
+  position: absolute;
+  z-index: 102;
+  opacity: 0;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.menu-hamburger {
+  position: relative;
+  z-index: 101;
+}
+
+.hamburger-menu-items {
+  padding: 16px;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(27, 80, 255);
+  font-size: 18px;
+  gap: 20px;
+  transform: translateX(-100%);
+  transition: transform 1s;
+}
+
+.hamburger input[type="checkbox"]:checked~.hamburger-menu-items {
+  transform: translateX(0);
+}
+
+.hamburger input[type="checkbox"]:checked~.menu-hamburger {
+  background-color: rgb(218, 168, 5);
+}
+
+.my-cart:hover,
+.aside-button:hover {
+  cursor: pointer;
+  background-color: rgb(218, 168, 5);
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 140rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 10rem;
+  text-decoration: none;
+  color: black;
+}
+
+.product {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+}
+
+.product h1 {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.product p {
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+}
+
+.product img {
+  width: 100%;
+
+
+}
+
+footer {
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.footer-text-end {
+  transform: translateY(350%);
+  font-size: 13px;
+  bottom: 0;
+  position: absolute;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.footer-item b {
+  margin-bottom: 20px;
+}
+
+.payment-methods {
+  font-size: 24px;
+  color: #000000;
+}
+
+.quick-links,
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  color: rgb(27, 80, 255);
+  gap: 5px;
+}
+
+.quick-links li:hover,
+.contact-us li:hover {
+  cursor: pointer;
+  color: rgb(23, 63, 194);
+}
+
+.add-to-cart ion-icon {
+  font-size: 3rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 5px;
+}
+
+.social-media i {
+  font-size: 32px;
+  color: #222;
+  transition: all .3s;
+}
+
+.social-media i:hover {
+  cursor: pointer;
+  color: #111;
+}
+
+
+@media (min-width: 801px) {
+  .menu-hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-item {
+    font-size: 11px;
+  }
+
+  .social-media {
+    flex-direction: column;
+  }
+
+  .search-box {
+    width: 50%;
+  }
+
+  .header-middle {
+    align-items: center;
+  }
+
+  .products,
+  .card {
+    width: 100%;
+  }
+
+  .card {
+    align-items: center;
+  }
+
+  .quick-find,
+  .header-left-bottom-text,
+  .header-menu {
+    display: none;
+  }
+
+  .welcome {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .my-cart {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    width: 100px;
+  }
+
+}
